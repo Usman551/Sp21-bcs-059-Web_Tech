@@ -1,6 +1,3 @@
-/* Custom styles to complement Bootstrap */
-
-/* General styling */
 :root {
   --primary-color: #e91e63;
   --dark-color: #333;
@@ -22,7 +19,6 @@
   background-color: var(--primary-color);
 }
 
-/* Header and navigation */
 .flag {
   width: 25px;
   height: 15px;
@@ -39,7 +35,6 @@
   border-bottom-right-radius: 0;
 }
 
-/* Hero carousel customization */
 .hero {
   position: relative;
 }
@@ -66,7 +61,6 @@
   border-radius: 5px;
 }
 
-/* Product cards */
 .product-card {
   transition: transform 0.3s, box-shadow 0.3s;
   border: none;
@@ -89,7 +83,6 @@
   background-color: var(--primary-color);
 }
 
-/* Category items */
 .category-item {
   height: 300px;
   overflow: hidden;
@@ -121,7 +114,6 @@
   transform: translateY(0);
 }
 
-/* Newsletter form */
 .newsletter-form button {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -132,7 +124,6 @@
   border-bottom-right-radius: 0;
 }
 
-/* Social icons */
 .social-icons a {
   width: 40px;
   height: 40px;
@@ -141,7 +132,6 @@
   justify-content: center;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .hero-content {
     left: 50%;

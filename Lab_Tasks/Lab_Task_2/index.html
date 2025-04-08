@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StyleHub - Checkout</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header with logo and title -->
+    <header class="bg-dark text-white py-3">
+      <div class="container">
+        <div class="row align-items-center">
+          <div
+            class="col-md-6 text-center text-md-start d-flex align-items-center"
+          >
+            <img
+              src="https://picsum.photos/id/20/80/40"
+              alt="StyleHub Logo"
+              class="me-3"
+            />
+            <h1 class="fs-3 fw-bold mb-0">StyleHub</h1>
+          </div>
+          <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+            <p class="mb-0 text-white-50">Secure Checkout</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main checkout section -->
+    <main class="py-5">
+      <div class="container">
+        <div class="row">
+          <!-- Order summary -->
+          <div class="col-lg-4 order-lg-2 mb-4">
+            <div class="card shadow-sm">
+              <div class="card-header bg-dark text-white">
+                <h3 class="fs-5 mb-0">Order Summary</h3>
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-between mb-3">
+                  <span>Subtotal</span>
+                  <span>$259.96</span>
+                </div>
+                <div class="d-flex justify-content-between mb-3">
+                  <span>Shipping</span>
+                  <span>$9.99</span>
+                </div>
+                <div class="d-flex justify-content-between mb-3">
+                  <span>Tax</span>
+                  <span>$23.40</span>
+                </div>
+                <hr />
+                <div class="d-flex justify-content-between fw-bold">
+                  <span>Total</span>
+                  <span>$293.35</span>
+                </div>
+
+                <div class="mt-4">
+                  <h4 class="fs-6 mb-3">Items in cart</h4>
+                  <div class="d-flex mb-3">
+                    <img
+                      src="https://picsum.photos/id/335/60/80"
+                      alt="Product"
+                      class="me-3 img-thumbnail"
+                      style="max-width: 60px"
+                    />
+                    <div>
+                      <h5 class="fs-6">Premium Denim Jacket</h5>
+                      <p class="text-muted mb-0">$89.99 x 1</p>
+                    </div>
+                  </div>
+                  <div class="d-flex mb-3">
+                    <img
+                      src="https://picsum.photos/id/669/60/80"
+                      alt="Product"
+                      class="me-3 img-thumbnail"
+                      style="max-width: 60px"
+                    />
+                    <div>
+                      <h5 class="fs-6">Casual Summer Dress</h5>
+                      <p class="text-muted mb-0">$59.99 x 1</p>
+                    </div>
+                  </div>
+                  <div class="d-flex mb-3">
+                    <img
+                      src="https://picsum.photos/id/318/60/80"
+                      alt="Product"
+                      class="me-3 img-thumbnail"
+                      style="max-width: 60px"
+                    />
+                    <div>
+                      <h5 class="fs-6">Classic White Sneakers</h5>
+                      <p class="text-muted mb-0">$79.99 x 1</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Checkout form -->
+          <div class="col-lg-8 order-lg-1">
+            <h2 class="mb-4">Checkout Information</h2>
+
+            <form id="checkout-form" novalidate>
+              <!-- Personal Information -->
+              <div class="card shadow-sm mb-4">
+                <div class="card-header bg-dark text-white">
+                  <h3 class="fs-5 mb-0">Personal Information</h3>
+                </div>
+                <div class="card-body">
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label for="fullName" class="form-label"
+                        >Full Name*</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="fullName"
+                        placeholder="John Doe"
+                        required
+                        pattern="^[A-Za-z ]+$"
+                      />
+                      <div class="invalid-feedback">
+                        Please enter a valid name (letters only).
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="email" class="form-label">Email*</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        placeholder="you@example.com"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Please enter a valid email address.
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="phone" class="form-label"
+                        >Phone Number*</label
+                      >
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="phone"
+                        placeholder="1234567890"
+                        required
+                        pattern="[0-9]{10,15}"
+                        minlength="10"
+                        maxlength="15"
+                      />
+                      <div class="invalid-feedback">
+                        Please enter a valid phone number (10-15 digits).
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Billing Address -->
+              <div class="card shadow-sm mb-4">
+                <div class="card-header bg-dark text-white">
+                  <h3 class="fs-5 mb-0">Billing Address</h3>
+                </div>
+                <div class="card-body">
+                  <div class="row g-3">
+                    <div class="col-12">
+                      <label for="address" class="form-label">Address*</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="address"
+                        placeholder="1234 Main St"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Please enter your shipping address.
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="city" class="form-label">City*</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="city"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Please enter your city.
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="state" class="form-label"
+                        >State/Province*</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="state"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Please enter your state or province.
+                      </div>
+                    </div>
+                    <div class="col-md-2">
+                      <label for="zip" class="form-label">Zip*</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="zip"
+                        required
+                        pattern="[0-9]{5,6}"
+                      />
+                      <div class="invalid-feedback">
+                        Please enter a valid zip code.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Payment Information -->
+              <div class="card shadow-sm mb-4">
+                <div class="card-header bg-dark text-white">
+                  <h3 class="fs-5 mb-0">Payment Information</h3>
+                </div>
+                <div class="card-body">
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label for="cardName" class="form-label"
+                        >Name on Card*</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="cardName"
+                        required
+                        pattern="^[A-Za-z ]+$"
+                      />
+                      <div class="invalid-feedback">
+                        Please enter the name as it appears on your card.
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="cardNumber" class="form-label"
+                        >Credit Card Number*</label
+                      >
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="cardNumber"
+                          placeholder="XXXX XXXX XXXX XXXX"
+                          required
+                          pattern="[0-9\s]{16,19}"
+                          maxlength="19"
+                        />
+                        <span class="input-group-text">
+                          <i class="fab fa-cc-visa me-1"></i>
+                          <i class="fab fa-cc-mastercard me-1"></i>
+                          <i class="fab fa-cc-amex"></i>
+                        </span>
+                      </div>
+                      <div class="invalid-feedback">
+                        Please enter a valid 16-digit credit card number.
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <label for="expiryDate" class="form-label"
+                        >Expiry Date*</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="expiryDate"
+                        placeholder="MM/YY"
+                        required
+                        pattern="(0[1-9]|1[0-2])\/([2-9][0-9])"
+                      />
+                      <div class="invalid-feedback">
+                        Please enter a valid future expiry date (MM/YY).
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <label for="cvv" class="form-label">CVV*</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="cvv"
+                        required
+                        pattern="[0-9]{3}"
+                        maxlength="3"
+                      />
+                      <div class="invalid-feedback">
+                        Please enter a valid 3-digit CVV.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-check mb-4">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="terms"
+                  required
+                />
+                <label class="form-check-label" for="terms">
+                  I agree to the <a href="#">terms and conditions</a>
+                </label>
+                <div class="invalid-feedback">
+                  You must agree before submitting.
+                </div>
+              </div>
+
+              <div class="d-grid gap-2">
+                <button class="btn btn-primary btn-lg" type="submit">
+                  Place Order
+                </button>
+                <a href="#" class="btn btn-outline-secondary">Return to Cart</a>
+              </div>
+            </form>
+
+            <!-- Success Message (Hidden by default) -->
+            <div
+              id="success-message"
+              class="alert alert-success mt-4"
+              style="display: none"
+            >
+              <h4 class="alert-heading">Thank you for your order!</h4>
+              <p>
+                Your order has been placed successfully. You will receive an
+                email confirmation shortly.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start">
+            <p class="mb-0">&copy; 2025 StyleHub. All Rights Reserved.</p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <div class="payment-methods">
+              <i class="fab fa-cc-visa mx-1"></i>
+              <i class="fab fa-cc-mastercard mx-1"></i>
+              <i class="fab fa-cc-amex mx-1"></i>
+              <i class="fab fa-cc-paypal mx-1"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
